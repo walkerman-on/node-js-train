@@ -1,12 +1,8 @@
 const amqp = require("amqplib")
 
-const LOGIN_RABBITMQ = "student"
-const PASSWORD_RABBITMQ = "student"
-const IP_VIRTUAL_MACHINE = "10.211.55.3"
-
 async function sendToQueue() {
 	const connection = await amqp.connect(
-		`amqp://${LOGIN_RABBITMQ}:${PASSWORD_RABBITMQ}@${IP_VIRTUAL_MACHINE}`
+		`amqp://${process.env.LOGIN_RABBITMQ}:${process.env.PASSWORD_RABBITMQ}@${process.env.IP_VIRTUAL_MACHINE}`
 	) // Устанавливаем соединение с RabbitMQ с указанием пользователя и пароля
 	const channel = await connection.createChannel() // Создаем канал
 
