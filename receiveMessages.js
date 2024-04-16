@@ -1,4 +1,6 @@
 const amqp = require("amqplib")
+const dotenv = require("dotenv")
+dotenv.config()
 
 async function receiveMessages() {
 	try {
