@@ -5,9 +5,9 @@
   },
   "name": "js-train",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "receiveMessages.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon receiveMessages.js"
   },
   "author": "",
   "license": "ISC",
